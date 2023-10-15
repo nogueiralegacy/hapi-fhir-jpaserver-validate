@@ -1,0 +1,8 @@
+{
+  "name": "servico",
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "fsh-sushi": "3.3.3"
+  }
+}

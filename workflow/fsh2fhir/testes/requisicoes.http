@@ -1,0 +1,12 @@
+
+### Versão
+GET {{server}}/versao
+
+### Conversão
+POST {{server}}/tofhir
+Content-Type: text/plain
+
+< ./patient-01.fsh
+
+
+

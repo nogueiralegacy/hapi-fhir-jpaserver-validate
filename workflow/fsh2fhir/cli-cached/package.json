@@ -1,0 +1,22 @@
+{
+  "name": "fsh2fhir-cli-cached",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Personaliza uso do fsh-sushi visando desempenho",
+  "main": "fsh2fhir-cli-cached.js",
+  "scripts": {
+    "execute": "node fsh2fhir-cli-cached.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnds-tools/fsh2fhir"
+  },
+  "keywords": [
+    "conversor com cache"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "servico": "file:../servico"
+  }
+}

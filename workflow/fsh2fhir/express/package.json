@@ -1,0 +1,24 @@
+{
+  "name": "fs2fhir-express",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Disponibiliza serviço web para conversão fsh to fhir (json)",
+  "main": "index.js",
+  "scripts": {
+    "monitore": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnds-tools"
+  },
+  "keywords": [
+    "conversor"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.18.2",
+    "servico": "file:../servico"
+  }
+}

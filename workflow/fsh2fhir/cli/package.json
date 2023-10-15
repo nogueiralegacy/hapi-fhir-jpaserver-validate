@@ -1,0 +1,22 @@
+{
+  "name": "fsh2fhir",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Conversor de fsh para fhir (json) usando fsh-sushi sem cache",
+  "main": "fsh2fhir.js",
+  "scripts": {
+    "execute": "node fsh2fhir.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnds-tools/fsh2fhir"
+  },
+  "keywords": [
+    "conversorr"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fsh-sushi": "^3.3.3"
+  }
+}

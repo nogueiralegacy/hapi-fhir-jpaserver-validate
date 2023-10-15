@@ -1,0 +1,24 @@
+{
+  "name": "validador",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Monitora diretório e submete mudanças para validação",
+  "main": "index.js",
+  "scripts": {
+    "monitore": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnds-tools"
+  },
+  "keywords": [
+    "validador"
+  ],
+  "author": "Fábio Nogueira de Lucena",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-xray-sdk": "^3.4.1",
+    "servico": "file:../servico"
+  }
+}
