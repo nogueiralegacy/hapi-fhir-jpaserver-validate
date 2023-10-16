@@ -5,12 +5,14 @@ import ca.uhn.fhir.jpa.batch2.JpaBatch2Config;
 import ca.uhn.fhir.jpa.starter.annotations.OnEitherVersion;
 import ca.uhn.fhir.jpa.starter.common.FhirTesterConfig;
 import ca.uhn.fhir.jpa.starter.mdm.MdmConfig;
+import ca.uhn.fhir.jpa.starter.util.WorkflowStart;
 import ca.uhn.fhir.jpa.subscription.channel.config.SubscriptionChannelConfig;
 import ca.uhn.fhir.jpa.subscription.match.config.SubscriptionProcessorConfig;
 import ca.uhn.fhir.jpa.subscription.match.config.WebsocketDispatcherConfig;
 import ca.uhn.fhir.jpa.subscription.submit.config.SubscriptionSubmitterConfig;
 import ca.uhn.fhir.rest.server.RestfulServer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -40,11 +42,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class Application extends SpringBootServletInitializer {
 
   public static void main(String[] args) {
-
-    SpringApplication.run(Application.class, args);
-
-    //Server is now accessible at eg. http://localhost:8080/fhir/metadata
-    //UI is now accessible at http://localhost:8080/
+	  SpringApplication.run(Application.class, args);
   }
 
   @Override
