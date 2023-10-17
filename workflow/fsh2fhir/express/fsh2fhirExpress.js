@@ -36,9 +36,9 @@ async function fshToFhirWebServiceStart() {
   });
 
   const server = app.listen(port, () => {
-    console.log(`[server]: Server disponível em http://localhost:${port}`);
+    console.log(`[server]: Server disponivel em http://localhost:${port}`);
     console.log("Windows: consulte Ethernet Adaptor (WSL) via ipconfig");
-    console.log("GET /versao para detalhes da versão.");
+    console.log("GET /versao para detalhes da versao.");
     console.log("POST /stop para interromper o servidor");
     console.log("POST /tofhir para converter payload em FSH para JSON");
   });

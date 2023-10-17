@@ -25,13 +25,13 @@ function converte(fsh, arquivo) {
       let json = JSON.stringify(res.data.fhir[0], null, 2);
       let saida = arquivo + ".json";
       fs.writeFileSync(saida, json);
-      console.log("Conversão com sucesso. Criado arquivo", saida);
+      console.log("Conversao com sucesso. Criado arquivo", saida);
     })
     .catch((err) => {
       if (err.code === "ECONNREFUSED") {
-        console.log("Provavelmente serviço não está disponível:", SERVICO);
+        console.log("Provavelmente serviço nao esta disponivel:", SERVICO);
       } else {
-        console.log("Tentativa de conversão falhou:", err);
+        console.log("Tentativa de conversao falhou:", err);
       }
     });
 }
@@ -50,7 +50,7 @@ function verificaDisponibilidade(servico) {
         throw new Error(msg);
       }
       console.log(
-        "Serviço disponível em ",
+        "Servico disponivel em ",
         servico,
         "versão:",
         res.data.versao
@@ -58,9 +58,9 @@ function verificaDisponibilidade(servico) {
     })
     .catch((err) => {
       if (err.code === "ECONNREFUSED") {
-        console.log("Provavelmente serviço não está disponível:", SERVICO);
+        console.log("Provavelmente serviço nao esta disponivel:", SERVICO);
       } else {
-        console.log("Tentativa de conversão falhou:", err);
+        console.log("Tentativa de conversao falhou:", err);
       }
     });
 }
@@ -86,10 +86,6 @@ function trataArquivoSeRelevante(file) {
   trataArquivoRelevante(file);
 }
 
-// Como usar?
-console.log("node fiscal-fsh.js <dir>");
-console.log("Requisições serão enviadas para", SERVICO);
-
 // Diretório a ser monitorado.
 // Padrão: diretório corrente
 let diretorio = __dirname;
@@ -109,4 +105,5 @@ const watcher = chokidar.watch(diretorio, {
 watcher.on("add", trataArquivoSeRelevante);
 watcher.on("change", trataArquivoSeRelevante);
 
-console.log("Monitorando criação/alteração de arquivos .fsh em", diretorio);
+console.log("Monitorando criacao/alteracao de arquivos .fsh em", diretorio);
+console.log("Requisições serao enviadas para", SERVICO);

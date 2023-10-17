@@ -50,7 +50,7 @@ function carregar(arquivo) {
     }
 
     if (!recurso.resourceType) {
-      console.log(`resourceType indisponível em ${arquivo}`);
+      console.log(`resourceType indisponivel em ${arquivo}`);
       return;
     }
 
@@ -60,7 +60,7 @@ function carregar(arquivo) {
 
 function trataArquivo(file) {
   if (!file.endsWith(".json")) {
-    console.log(`Apenas .json, mudança em arquivo ${file} ignorada.`);
+    console.log(`Apenas .json, mudanca em arquivo ${file} ignorada.`);
     return;
   }
 
@@ -91,7 +91,7 @@ function validate(recurso) {
     });
 }
 
-console.log("Monitorando:", diretorio);
+console.log("Monitorando criacao/alteracao de arquivos .json em:", diretorio);
 console.log("Servidor FHIR:", baseUrl);
 
 const watcher = chokidar.watch(diretorio, {
