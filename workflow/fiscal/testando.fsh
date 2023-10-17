@@ -1,0 +1,2 @@
+Instance: Danie
+InstanceOf: Patient

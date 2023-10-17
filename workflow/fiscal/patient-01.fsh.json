@@ -1,9 +1,0 @@
-{
-    "resourceType":"Patient",
-    "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns='http://www.w3.org/1999/xhtml'>Narrativa</div>"
-    }, 
-    "id":"patient01",
-    "active":true
-}

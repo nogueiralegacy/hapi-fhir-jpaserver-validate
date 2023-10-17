@@ -1,13 +1,6 @@
-// Aplicação que monitora diretório e
-// submete arquivos FSH modificados para
-// conversão em JSON.
-
 const chokidar = require("chokidar");
 const fs = require("fs");
 const axios = require("axios");
-
-// Serviço fsh2fhir tem de estar rodando localmente
-// na porta 3030.
 
 const SERVICO = "http://localhost:3030";
 
@@ -87,7 +80,6 @@ function trataArquivoRelevante(arquivo) {
 
 function trataArquivoSeRelevante(file) {
   if (!file.endsWith(".fsh")) {
-    console.log(`Apenas .fsh, mudança em arquivo ${file} ignorada.`);
     return;
   }
 

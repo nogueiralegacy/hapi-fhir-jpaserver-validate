@@ -1,3 +1,0 @@
-Instance: Teste
-InstanceOf: Patient
-

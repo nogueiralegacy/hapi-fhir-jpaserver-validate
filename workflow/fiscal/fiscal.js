@@ -1,5 +1,5 @@
 // Aplicação que monitora diretório e
-// submete arquivos JSON modificados para
+// submete arquivos modificados para
 // validação
 
 // USO:
@@ -26,7 +26,7 @@ function servidorParaUso(baseUrl) {
 
 // Terceiro argumento, se fornecido, indica o servidor
 // a ser utilizado. Se não fornecido, usa-se servidor
-// HAPI-FHIR (http://hapi.fhir.org/baseR4) por padrão.
+// HAPI-FHIR(http://hapi.fhir.org/baseR4) por padrão.
 
 const STANDARD_SERVER = "http://hapi.fhir.org/baseR4";
 
@@ -68,8 +68,8 @@ function trataArquivo(file) {
 }
 
 function validate(recurso) {
-  let urlValidate = getUrl(recurso.resourceType);
-  console.log(urlValidate);
+  let hapifhir = getUrl(recurso.resourceType);
+  console.log(hapifhir);
 
   const dados = JSON.stringify(recurso);
   console.log(dados, dados.length);
@@ -81,7 +81,7 @@ function validate(recurso) {
   };
 
   axios
-    .post(urlValidate, recurso, config)
+    .post(hapifhir, recurso, config)
     .then((res) => {
       console.log("Status Code:", res.status);
       console.log(res.data);
